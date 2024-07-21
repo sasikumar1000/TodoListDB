@@ -13,13 +13,13 @@ import com.learning.porter_basic_database.db.Todo
 import com.learning.porter_basic_database.db.TodoAdapter
 import com.learning.porter_basic_database.db.TodoViewModel
 import dagger.hilt.android.AndroidEntryPoint
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 
-@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private val todoViewModel: TodoViewModel by viewModels()
+    private val todoViewModel: TodoViewModel by viewModel()
     private lateinit var todoAdapter: TodoAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {

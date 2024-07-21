@@ -9,18 +9,11 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-@HiltViewModel
-class TodoViewModel @Inject constructor(
-    application: Application,
+class TodoViewModel(
     private val repository: TodoRepository
-) : AndroidViewModel(application) {
+) : AndroidViewModel(Application()) {
 
     val allTodos: LiveData<List<Todo>> = repository.allTodos
-
-    init {
-//        val todoDao = TodoDatabase.getDatabase(application).taskItemTodo()
-//        repository = TodoRepository(todoDao)
-    }
 
     fun insert(todo: Todo) = viewModelScope.launch(Dispatchers.IO) {
         repository.insert(todo)

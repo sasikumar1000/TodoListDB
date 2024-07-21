@@ -1,10 +1,7 @@
 package com.learning.porter_basic_database.db
 
-import android.graphics.Paint
-import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.learning.porter_basic_database.databinding.TaskItemBinding
 
