@@ -61,6 +61,9 @@ dependencies {
     implementation ("androidx.room:room-runtime:2.4.3")
 
 
+    implementation ("io.insert-koin:koin-android:3.1.2")
+    implementation ("io.insert-koin:koin-android-compat:3.1.2")
+
     implementation("com.google.dagger:hilt-android:2.44")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
 }
